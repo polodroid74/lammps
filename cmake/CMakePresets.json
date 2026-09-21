@@ -1,0 +1,41 @@
+{
+    "version": 1,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 23,
+        "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "default",
+            "binaryDir": "${sourceDir}/../build",
+            "generator": "Unix Makefiles"
+        },
+        {
+            "name": "mliap",
+            "binaryDir": "${sourceDir}/../build",
+            "generator": "Unix Makefiles",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "PKG_PYTHON"  : "TRUE",
+                "PKG_ML-SNAP" : "TRUE",
+
+                "MLIAP_ENABLE_PYTHON" : "TRUE",
+                "PKG_ML-IAP" : "TRUE",
+
+                "PKG_ML-PACE" : "TRUE",
+                "MLIAP_ACE"  : "TRUE",
+                "MLIAP_ENABLE_ACE" : "TRUE"
+            }
+        },
+        {
+            "name": "qtcreator",
+            "inherits": "mliap",
+            "binaryDir": "/tmp/build",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "Python_EXECUTABLE" : "/home/paulbouton/software/python/profiles/lammps/bin/python"
+            }
+        }
+    ]
+}
