@@ -1,0 +1,4 @@
+To parse th porject on QT Creator and use MLIAP module, please use the following CMake options :
+
+
+-DPython_EXECUTABLE=<path_to_your_venv>/profiles/lammps/bin/python -D PKG_ML-IAP=yes -D PKG_ML-SNAP=yes -D PKG_PYTHON=yes -D MLIAP_ENABLE_PYTHON=yes
