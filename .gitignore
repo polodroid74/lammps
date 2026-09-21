@@ -71,3 +71,6 @@ src/Makefile.package.settings-e
 /CLAUDE.local.md
 /.claude/settings.local.json
 /.claude/scheduled_tasks.lock
+
+#QTCreator
+*.qtcreator
